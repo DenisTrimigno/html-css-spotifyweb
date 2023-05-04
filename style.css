@@ -4,3 +4,100 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* LAYOUT GENERAL */
+
+
+
+
+header {
+    background-color: aquamarine;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+
+
+.home {
+    position: fixed;
+    left: 0;
+    height: 100%;
+}
+
+.dashboard {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+
+}
+
+.container-home {
+    height: 100%;
+    width: 200px ;
+    background-color: blueviolet;
+
+}
+
+.container {
+    width: 100vw;
+    height: 100px;
+    background-color: blue;
+    display: flex;
+    
+}
+
+.row {
+    display: flex;
+    width: 100%;
+
+}
+
+.row.end {
+    justify-content: end;
+}
+
+.col-fixed {
+    background-color: rgb(143, 90, 22);
+    width: 300px;
+    height: 100px;
+    
+}
+
+
+.col-25 {
+    width: calc(25% - 10px);
+    height: 100px;
+    background-color: brown;
+    margin: 0px 5px;
+
+}
+
+.col-50 {
+    width: calc(50% - 10px);
+    height: 100px;
+    background-color: brown;
+    margin: 0px 5px;
+    
+}
+
+
+@media screen and ( max-width: 480px ) {
+    .container-home {
+        width: 50px ;
+    }
+    
+    
+    
+}
+
+
+@media screen and ( max-width: 768px ) {
+    
+}
+
+
+@media screen and ( max-width: 991px ) {
+    
+}
+
+
