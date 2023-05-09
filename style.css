@@ -3,12 +3,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* LAYOUT GENERAL */
 
 header {
-    background-color: #1212128a;
     height: 50px;
     width: 100%;
     position: absolute;
@@ -38,7 +38,7 @@ header {
 .container {
     width: 100vw;
     height: 80px;
-    background-color: #12121245;
+    background-color: rgba(0, 0, 0, 0.095);
     display: flex;
     
 }
@@ -47,6 +47,42 @@ a {
     text-decoration: none;
     color: white;
 }
+
+a li {
+    text-decoration: none;
+    color: gray
+}
+
+span a {
+    color: 
+    grey;
+}
+/* hover */
+a li:hover , ul a li:hover, .fa-heart:hover , .fa-folder:hover , .margin-element i:hover , #text-plus:hover   {
+    color: white;
+}
+.col-bottom a :hover {
+    color: white;
+}
+
+#john {
+    color: white;
+
+}
+.under-song:hover {
+    color: white;
+    text-decoration: underline;
+}
+.col-10 a:hover , button:hover{
+  transform: scale(1.2);
+}
+/* hover out*/
+
+.col-bottom a p , .under-song {
+    color: grey;
+}
+
+
 
 i {
     margin-right: 6px;
@@ -65,20 +101,25 @@ span {
 }
 
 li{
-    color: white;
+    
     display: flex;
     align-items: center;
 }
 
 
-.row {
+.row , .row-player {
     
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
+.row-player {
+    background-color: rgb(54, 54, 54);
+}
+
 .row-bottom {
+    background-color: #121212;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -93,6 +134,7 @@ li{
 }
 
 .row.end {
+    background-color: #1212125f;
     display: flex;
     justify-content: end;
     width: 100%;
@@ -115,6 +157,7 @@ button {
     border: 2px solid white;
     border-radius: 20px;
     background-color: transparent;
+    margin-right: 20px;
   
 
 }
@@ -122,12 +165,12 @@ button {
 
 .col-left {
     width: calc(30%);
-    background-color: gray;
     margin: 0px 0px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 100%;
+    padding-left: 10px;
 
 }
 
@@ -139,7 +182,23 @@ button {
     justify-content: flex-end;
     align-items: center;
     height: 100%;
+    padding-right: 5px;
 
+}
+
+.col-right i {
+    margin-right: 5px;
+}
+
+.col-bottom a {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.col-bottom .profile-logo {
+    display: flex;
+    align-items: center;
 }
 
 .col-40 {
@@ -158,12 +217,47 @@ button {
 }
 
 .container-display {
-    margin-top: 80px;
+    padding-top: 100px;
     width: calc(100vw - 200px);
-    height: calc(100vh - 160px);
-    background-color: blanchedalmond;
+    height: calc(100vh - 80px);
+    background-color: rgb(31, 37, 47);
     overflow: auto;
     
+}
+
+.row-display{
+  display: flex;
+}
+
+.col {
+    width: calc(100% / 6 - 20px);
+    margin: 10px;
+    margin-top: 30px;
+    position: relative;
+
+}
+
+.col:hover .overlay {
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    background-color: #07070756;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+
+.col img {
+    width: 100%;
+  
 }
 
 
@@ -180,7 +274,7 @@ button {
 .sidebar-top {
   height: 400px;
   width: 100%;
-  background-color: yellowgreen;
+
 
 }
 
@@ -188,7 +282,6 @@ button {
     z-index: 5;
     min-height: 80px;
     width: 100%;
-    background-color: rgb(113, 157, 113);
 
 }
 
@@ -202,7 +295,6 @@ button {
 .logo {
     height: 80px;
     width: 100%;
-    background-color: rgb(33, 165, 33);
 }
 
 .logo img {
@@ -214,10 +306,28 @@ button {
 .main-menu {
     height: 120px;
     width: 100%;
-    background-color: rgb(73, 198, 73);
 }
 
+#home-head {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.green-bar {
+    border-left: 3px  solid rgb(1, 188, 1);
+}
+
+.green-bar-2 {
+    color:rgb(1, 188, 1);
+}
+
+
 .main-menu ul li {
+    color: grey;
+    font-size: 12px;
+    font-weight: 100;
     padding: 5px;
     margin-left: 10px;
 
@@ -237,20 +347,29 @@ button {
     font-size: 30px;
 }
 
+#text-plus {
+    margin-left: 10px;
+    color: grey;
+}
+
+
+
 
 .playlist-list {
-    
+    font-weight: 100;
+    font-size: 14px;
     padding: 15px;
     position: absolute;
     z-index: 1;
     height: 300px;
     width: 100%;
-    background-color: rgb(151, 246, 151);
+    background-color: transparent;
     overflow-y: auto;
 
 }
 
 .playlist-list ul li{
+    color: grey;
     margin-bottom: 20px;
     list-style-type: none;
 }
@@ -268,15 +387,72 @@ hr {
     color: grey;
 }
 
+/* DISPLAY CONTENUTI */
 
-/* PLAYER BOTTOM centrale */
+.container-display ul {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 10px;
+    
+}
+
+.container-display ul li {
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+/* DISPLAY CONTENUTI titoli*/
+
+h2 {
+    color: white;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.titles {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+.titles h3 {
+    font-size: 15px;
+    color: white;
+
+}
+
+.titles p {
+    color: rgb(157, 155, 155);
+    font-size: 12px;
+    margin-top: -2px;
+    margin-left: 0px;
+}
+
+
+
+.subtitle-title {
+    color: grey;
+    font-size: 11px;
+}
+
+.circle{
+    border-radius: 50%;
+    
+}
+
+
+/* PLAYER BOTTOM */
 
 .row-player-1 {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 30px;
-    background-color: beige;
+  
 }
 
 .row-player-2 {
@@ -292,7 +468,6 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
     width: 40px;
     margin: 0px 2px;
     height: 30px;
@@ -338,9 +513,6 @@ hr {
    
 }
 
-.bold {
-
-}
 
 .brano-name {
     margin-top: -10px;
@@ -385,92 +557,138 @@ hr {
       
     }    
 
-
-
-/* PLAYER BOTTOM laterali */
-
-
-
-  
-
-
-
 /* ICONS */
 
 .fa-plus {
-    padding-top: 5px;
+    padding-top: 6px;
     text-align: center;
     height: 28px;
-    background-color: gray;
+    background-color: rgb(173, 172, 172);
     width: 28px;
 }
 
 .fa-arrow-down {
-
+    color: aliceblue;
     font-size: 6px;
     font-weight: bold;
     width: 15px;
-    height: 15px;
+    margin-right: -5px;
+    height: 16px;
     padding-top: 4px;
     text-align: center;
     border-radius: 60%;
-    border: 1px solid black;
+    border: 1px solid rgb(160, 157, 157);
 }
 
-.fa-play{
-    margin-left: 5px;
-    width: 28px;
-    height: 30px;
-    padding: 5px;
-    border-radius: 60%;
-    border: 3px solid black;
+.fa-play-circle {
+    font-size: 30px;
+    color: white;
 }
 
-.buttons{
-    width: 12px;
+
+
+.fa-step-backward , .fa-forward-step{
+   font-size: 20px;
+   color: white;
 }
+
+.fa-arrow-rotate-right , .fa-shuffle {
+    font-size: 14px;
+    color: white;
+}
+
 
 .profile-logo {
-    width: 15%;
-    margin-right: 15px;
+    width: 12%;
+    padding: 1px;
     border: 1px solid grey;
     background-color: grey;
     border-radius: 50%;
+    margin-right: -1px;
     
 }
+
+
 
 .user-align {
     align-items: center;
 }
 
-.icons-player {
-    margin: 5px;
-    width: 13px;
+
+
+.col-right i {
+    font-size: 12px;
+    padding: 3px;
+    color: white;
+}
+
+.col-left i {
+    color: rgb(183, 179, 179);
 }
 
 
 
-@media screen and ( max-width: 480px ) {
-    .container-sidebar {
+
+
+
+@media screen and ( max-width: 550px ) {
+ .container-sidebar {
         width: 50px ;
     }
 
-    a {
-        display: none;
+a { display: none;
     }
+    
 
-    .container-display {
-    width: calc(100vw - 50px);
-   
-}
-    .logo img {
+.logo img {
     content: url(./img/logo-small.svg);
     margin: 0px;
     padding: 5px;
     width: 40px;
 }
+.playlist-list {
+    display: none;
+}
+
+.playlist {
+    display: none;
+}
+
+.row-bottom p {
+    display: none;
+}
+
+.hr-bottom {
+    display: none;
+}
+.col-bottom {
+   margin: 1px;
     
-    
+}
+.profile-logo {
+    margin: 10px;
+    width: 20px;
+    margin-left: -32px;
+}
+
+.fa-arrow-down {
+    margin-right: 45px;
+}
+
+.container-display {
+    width: calc(100% - 50px);
+}
+
+.row-display{
+   width: 100% ;
+   flex-wrap: wrap;
+}
+
+.col {
+    width: calc(100% / 2  - 20px);
+    margin: 10px;
+
+}
     
 }
 
@@ -480,7 +698,15 @@ hr {
 }
 
 
-@media screen and ( max-width: 991px ) {
+@media screen and (max-width: 900px) and (min-width: 550px) {
+
+    .row-display{
+        flex-wrap: wrap;
+    }
+    .col {
+        width: calc(100% / 4 - 20px);
+    }
+
     
 }
 
